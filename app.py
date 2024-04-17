@@ -69,6 +69,11 @@ def main():
         }
         risk_status = predict_single_instance(model, features_pred)
         st.success(f'Risk Status: {risk_status}')
+        # Display result with color coding
+        if risk_status == 'Low Risk':
+            st.markdown(f'<h2 style="color:green;">{risk_status}</h2>', unsafe_allow_html=True)
+        else:
+            st.markdown(f'<h2 style="color:red;">{risk_status}</h2>', unsafe_allow_html=True)
 
 
 if __name__ == '__main__':
