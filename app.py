@@ -21,6 +21,14 @@ def predict_single_instance(model, feature_values):
 
 # Streamlit app
 def main():
+    st.set_page_config(layout="wide")  # Set the layout to wide mode
+    col1, col2 = st.columns([3, 1])  # Create two columns, col2 will be narrower
+
+    with col1:
+        st.title('Loan Risk Prediction App')  # Example title
+
+    with col2:
+        st.image("path/to/your/logo.png", width=100)
     st.title('Loan Risk Prediction App')
     # Model loading
     model = load_model()
