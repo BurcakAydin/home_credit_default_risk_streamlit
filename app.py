@@ -28,7 +28,7 @@ def main():
         st.title('Loan Risk Prediction App')  # Example title
 
     with col2:
-        st.image("path/to/your/logo.png", width=100)
+        st.image("logo.png", width=100)
     st.title('Loan Risk Prediction App')
     # Model loading
     model = load_model()
