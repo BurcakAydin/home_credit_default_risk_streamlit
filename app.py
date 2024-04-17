@@ -29,7 +29,7 @@ def main():
 
     with col2:
         st.image("logo.png", width=100)
-    st.title('Loan Risk Prediction App')
+
     # Model loading
     model = load_model()
 
