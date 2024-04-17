@@ -22,7 +22,14 @@ def predict_single_instance(model, feature_values):
 # Streamlit app
 def main():
     st.title('Loan Risk Prediction App')
+    st.set_page_config(layout="wide")  # Set the layout to "wide"
 
+    # Create a row for the logo
+    col1, col2 = st.columns([1, 3])  # Adjust the ratio as needed to position your logo
+    with col1:
+        st.write("")  # This can be left empty or used for other widgets
+    with col2:
+        st.image("path/to/logo.png", width=100)
     # Model loading
     model = load_model()
 
